@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>狸貓大頭貼</title>
+  <link rel="stylesheet" href="./_css/style.css">
+</head>
+
+<body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app" class="container">
+  <h1>狸貓大頭貼</h1>
+  <div class="profile" id="profile" :style="{backgroundColor:colorPicked}">
+    <img class="image" src="./images/狸貓眼裡無人.png" alt="">
+  </div>
+  <div class="color_picker_wrap">
+    <div v-for="(color,index) in colorList" :key='index' class="color_btn" :style="{backgroundColor:color}" @click="changeBackgroundColor(color)"></div>
+  </div>
+  <a class="donate" target="_blank" href="https://www.buymeacoffee.com/tanuki.jr"><img src="https://em-content.zobj.net/thumbs/320/apple/118/roasted-sweet-potato_1f360.png" alt=""></a>
+
+</div>
+
+<script>
+  const { createApp, ref,reactive } = Vue
+
+  createApp({
+    setup() {
+      const colorList = reactive(['red','orange','yellow','green','blue','indigo','purple','pink','brown','black'
+      ])
+      const colorPicked = ref('')
+      console.log(colorPicked.value);
+      const changeBackgroundColor = (color) => {
+        colorList.forEach(color => {
+        });
+        colorPicked.value = color
+      }
+      return {
+        colorList,
+        colorPicked,
+        changeBackgroundColor
+      }
+    }
+  }).mount('#app')
+</script>
+</body>
+</html>

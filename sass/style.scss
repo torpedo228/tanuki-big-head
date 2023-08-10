@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: gold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 5vw;
+    color: purple;
+    margin: 5vh 0;
+  }
+
+  div.profile {
+    width: 25vw;
+    height: 25vw;
+    border: 15px solid purple;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 5vh;
+
+    img.image {
+      transform: translate(-4vw, 12vh);
+      width: 30vw;
+    }
+  }
+
+  div.color_picker_wrap {
+    display: flex;
+    gap: 1vw;
+
+    div.color_btn {
+      cursor: pointer;
+      border: 5px solid purple;
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+    }
+
+
+  }
+
+
+}
+
+a.donate{
+  position: absolute;
+  bottom:10vh;
+  right:5vw;
+
+  img{
+    width: 10vw; 
+  }
+}
