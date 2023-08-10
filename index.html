@@ -6,14 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon"
   href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍠</text></svg>">
+  <link rel="icon" href="./tanuki.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="./tanuki.ico" type="image/x-icon" />
   <title>狸貓大頭貼</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script type='text/javascript'
+  src='./main.js'>
+  </script>
 </head>
 
 <body>
+
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <div id="app" class="container">
+  <audio data-key="87" src="./chuchu.mp3"></audio>
   <h1>狸貓大頭貼</h1>
   <div class="profile" id="profile" :style="{backgroundColor:colorPicked}">
     <img class="image" src="./images/狸貓眼裡無人.png" alt="">
@@ -22,7 +29,6 @@
     <div v-for="(color,index) in colorList" :key='index' class="color_btn" :style="{backgroundColor:color}" @click="changeBackgroundColor(color)"></div>
   </div>
   <a class="donate" target="_blank" href="https://www.buymeacoffee.com/tanuki.jr"><img src="https://em-content.zobj.net/thumbs/320/apple/118/roasted-sweet-potato_1f360.png" alt=""></a>
-
 </div>
 
 <script>
